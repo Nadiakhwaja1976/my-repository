@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: My First Cloudformation with Auto scaling
+  
+Parameters:
+  
+Metadata:
+  
+Mappings:
+  
+Conditions:
+  
+Resources:
+
+rMySG:
+  Type: AWS::EC2::SecurityGroup
+  Properties:
+    GroupDescription: Enable SSH and HTTP # Required
+    GroupName: Enable SSH and HTTP
+    SecurityGroupIngress:
+    IpProtocol: tcp
+    FromPort: 22
+    ToPort: 22
+    CidrIp: 0.0.0.0/0
+    IpProtocol: tcp
+    FromPort: 80
+    ToPort: 80
+    CidrIp: 0.0.0.0/0
+   VpcId: "String"
+  
+Transform:
+  
+Outputs:
